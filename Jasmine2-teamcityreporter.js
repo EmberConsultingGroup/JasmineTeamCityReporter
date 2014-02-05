@@ -58,11 +58,14 @@ getJasmineRequireObj().TeamcityReporter = function () {
             specCount++;
             if (result.status == "failed") {
                 failureCount++;
+                print("##teamcity[testFailed name='" + escapeTeamcityString(result.description) + "' message='" + escapeTeamcityString(result.status) + "']");
                 var resultItems = result.failedExpectations;
+                var outPut = "";
                 for (var i = 0; i < resultItems.length; i++) {
                     var resultSpec = resultItems[i];
-                    print("##teamcity[testFailed type='" + resultSpec.matcherName + "' expected='" + resultSpec.expected + "' actual='" + resultSpec.actual + "'  name='" + escapeTeamcityString(result.description) + "' message='|[FAILED|] " + resultSpec.message + "' details='" + escapeTeamcityString(resultSpec.stack) + "']");
+                    outPut += "\nMESSAGE:=" + escapeTeamcityString(resultSpec.message) + " MATCHER:=" + escapeTeamcityString(resultSpec.matcherName) + "  EXPECTED:=" + escapeTeamcityString(resultSpec.expected) + " ACTUAL:=" + escapeTeamcityString(resultSpec.actual) + "]";
                 }
+                print("##teamcity[testStdErr name='" + escapeTeamcityString(result.description) + "' out='" + outPut + "']");
             }
             print("##teamcity[testFinished name='" + escapeTeamcityString(result.description) + "']");
         };
