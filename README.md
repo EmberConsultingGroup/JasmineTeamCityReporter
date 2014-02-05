@@ -1,7 +1,5 @@
-Jasmine TeamCity Reporter
+Jasmine 2.0 - TeamCity Reporter
 =======================
-
-Jasmine 2.0 TeamCity Reporter
 
 
 To use, in your spec runner code add the following code
