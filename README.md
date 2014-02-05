@@ -1,4 +1,4 @@
-JasmineTeamCityReporter
+Jasmine TeamCity Reporter
 =======================
 
 Jasmine 2.0 TeamCity Reporter
