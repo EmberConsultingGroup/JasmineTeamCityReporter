@@ -15,6 +15,8 @@ jasmine.getEnv().addReporter(window.teamcityReporter);
 
 ###Team City reporting tab
 
+* Bottom 4 tests are jasmine
+
 ![](https://raw2.github.com/EmberConsultingGroup/JasmineTeamCityReporter/master/images/Tests.PNG)
 
 
