@@ -9,3 +9,5 @@ var TeamcityReporter = jasmineRequire.TeamcityReporter();
 window.teamcityReporter = new TeamcityReporter();
 jasmine.getEnv().addReporter(window.teamcityReporter);
 ```
+
+[For more complete instructions using teamcity and jasmine 2.0 with requirejs in your CI build](https://github.com/EmberConsultingGroup/Testing-Automation)
